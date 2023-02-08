@@ -10,6 +10,7 @@ module.exports = {
     jest: true,
     node: true,
   },
+  ignorePatterns: ['.eslintrc.js', '**/*.js'],
   extends: [
     'airbnb-typescript/base',
     'plugin:vue-a11y/recommended',
@@ -22,7 +23,12 @@ module.exports = {
   plugins: ['@typescript-eslint', 'vue-a11y', 'prettier', 'vue'],
   // add your custom rules here
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true, trailingComma: 'es5', printWidth: 100 }],
+    // disable the rule for all files
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, trailingComma: 'es5', printWidth: 100, endOfLine: 'auto' },
+    ],
     'import/extensions': [
       'error',
       'always',
@@ -41,6 +47,15 @@ module.exports = {
     'vue/max-attributes-per-line': 'off',
     'vue/component-name-in-template-casing': [1, 'kebab-case'],
   },
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': ['error'],
+      },
+    },
+  ],
   settings: {
     'import/core-modules': [
       '@nuxt/config',

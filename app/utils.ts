@@ -1,7 +1,7 @@
 export function createExcerpt({ text, length = 150 }: { text: string; length?: number }): string {
   return text.split('', length).concat(['...']).join('');
 }
-
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export async function getContent({ context, prefix }): Promise<{ slug: string; title: string }[]> {
   const slugs: string[] = [];
   const content: { slug: string; title: string; featuredImage: string }[] = [];
