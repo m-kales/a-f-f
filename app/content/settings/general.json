@@ -1,10 +1,10 @@
 {
-  "title": "Homev",
-  "titleTemplate": "| Bluise",
-  "welcomeText": "# Yo, I'm Bluise - A Nuxt.js & Netlify CMS boilerplate.\n\nAuthentic cred hoodie hashtag selfies. Raclette banjo cardigan cred. Kitsch XOXO lomo polaroid. Knausgaard put a bird on it four dollar toast leggings typewriter asymmetrical.\n\n\n\n\n\nHIIIIIIIIIIIIIIIIIIIIIIIIIIII",
-  "logo": "/images/uploads/logo.svg",
-  "icon": "/images/uploads/logo.png",
+  "title": "Forside",
+  "titleTemplate": "| Alliance Française Fyn",
+  "welcomeText": "# Alliance Française Fyn \n\n Der findes uafhængige afdelinger af Alliance Française over hele verden.  \n\n  Vi arbejder alle med at fremme fransk kultur og sprog, og i nogle lande står alliancerne også for undervisning i det franske sprog.\n\nForeningen har hjemsted i Odense, men kommer gerne rundt på Fyn med foredrag mv., hvis der er mulighed for det.\n\nVia foredrag, koncerter og andre arrangementer prøver vi at udbrede kendskabet til Frankrig, det franske sprog og ikke mindst den franske kultur - og kulturen i andre fransksprogede lande.\n\nVi arbejder med kultur i bred forstand, fra sprog, litteratur, kunst og musik til samfundsforhold, historie og det franske erhvervsliv. Også emner som mode, vin og mad kan være at finde i vores program.\n\nVi har jævnligt besøg af danske og franske kunstnere og kulturpersonligheder.\n\nVi tilbyder ikke sprogundervisning, da det i Danmark hører under oplysningsforbundene.",
+  "logo": "/images/uploads/logo_af-de-fionie_rgb.svg",
+  "icon": "/images/uploads/icon_af-de-fionie.png",
   "loadingColor": "#0b3765",
-  "seoDescription": "A quickstart for Nuxt & Netlify CMS",
+  "seoDescription": "Forening på Fyn med det formål at udbrede fransk sprog og kultur",
   "seoMetaImage": ""
 }
