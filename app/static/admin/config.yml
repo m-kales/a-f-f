@@ -53,7 +53,14 @@ collections:
       - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
       - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
       - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
-      - { label: 'PDF', name: 'pdf', widget: 'file' }
+      - { label: 'PDF', 
+          name: 'pdf', 
+          widget: 'list',
+          fields: {
+            - { name: 'title', label: 'Title', widget: string }
+            - { name: 'file', label: 'File', widget: file }
+          }
+        }
   - name: 'blog'
     label: 'Blog'
     folder: 'app/content/blog'
