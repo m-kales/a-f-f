@@ -1,6 +1,13 @@
 <template>
   <section class="home">
-    <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col md:flex-row items-start">
+      <div class="flex flex-col w-full xl:w-2/5 pr-5">
+        <img
+          alt="Hero"
+          class="rounded shadow-xl"
+          src="~/static/images/uploads/antony-bec-nD9tEn63suc-unsplash_medium.jpg"
+        />
+      </div>
       <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden">
         <div v-html="$md.render(welcomeText)" class="home__welcome markdown" />
 
@@ -33,13 +40,6 @@
           </form>
         </div>
       </div>
-      <div class="flex flex-col w-full xl:w-2/5">
-        <img
-          alt="Hero"
-          class="rounded shadow-xl"
-          src="https://source.unsplash.com/random/720x400"
-        />
-      </div>
     </div>
   </section>
 </template>
@@ -55,6 +55,8 @@ import settings from '@/content/settings/general.json';
   },
 })
 export default class Home extends Vue {
+  [x: string]: any;
+
   welcomeText = settings.welcomeText;
 
   get posts(): Post[] {
