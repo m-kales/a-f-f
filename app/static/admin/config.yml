@@ -57,8 +57,8 @@ collections:
           name: 'pdf', 
           widget: 'list',
           fields:
-            - { name: 'title', label: 'Title', widget: string }
-            - { name: 'file', label: 'File', widget: file }
+            - { name: title, label: Title, widget: string }
+            - { name: file, label: File, widget: file }
         }
   - name: 'blog'
     label: 'Blog'
