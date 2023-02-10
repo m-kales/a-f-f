@@ -24,7 +24,7 @@ collections:
           - { label: 'Title Template', name: titleTemplate, widget: string }
           - { label: 'Welcome Headline', name: welcomeHeadline, widget: string }
           - { label: 'Hero Title', name: heroTitle, widget: string }
-          - { label: 'Hero Alt', name: heroAlt, widget: string },
+          - { label: 'Hero Alt', name: heroAlt, widget: string }
           - { label: 'Hero Image', name: heroImg, widget: image }
           - { label: 'Welcome Text', name: welcomeText, widget: markdown }
           - { label: "En français s'il vous plaît", name: welcomeTextFr, widget: markdown }
