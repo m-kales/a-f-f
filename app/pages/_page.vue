@@ -1,13 +1,20 @@
 <template>
-  <section class="page" :class="page.slug">
-    <h1 class="page__title text-lg md:text-xl lg:text-4xl xl:text-6xl text-center py-8 md:py-16">
+  <section class="page h-screen w-1/2 mx-auto" :class="page.slug">
+    <h1
+      class="page__title font-title text-lg md:text-xl lg:text-4xl xl:text-6xl text-center py-8 md:py-16"
+    >
       {{ page.title }}
     </h1>
-    <div v-html="$md.render(page.content)" class="page__content markdown pt-4 md:pt-6 md:pb-24" />
+    <div
+      v-html="$md.render(page.content)"
+      class="page__content mx-auto markdown pt-4 md:pt-6 md:pb-24"
+    />
     <div v-if="page.pdf">
-      <a v-for="(pdfFile, index) in page.pdf" :key="index" :href="pdfFile.file">{{
-        pdfFile.title
-      }}</a>
+      <ul class="font-title text-2xl underline">
+        <li v-for="(pdfFile, index) in page.pdf" :key="index">
+          <a :href="pdfFile.file">{{ pdfFile.title }}</a>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
