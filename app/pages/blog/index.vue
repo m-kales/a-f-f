@@ -1,7 +1,7 @@
 <template>
   <section class="blog">
     <div class="py-8 md:py-16 text-center">
-      <h1 class="font-title text-lg md:text-xl lg:text-4xl xl:text-6xl">Blog</h1>
+      <h1 class="font-title text-2xl lg:text-4xl xl:text-6xl">Blog</h1>
       <h2 class="text-base md:text-lg lg:text-xl xl:text-2xl">
         Læs om alliancens aktiviteter
       </h2>
@@ -17,7 +17,7 @@
               :src="post.featuredImage || 'https://source.unsplash.com/random/640x340'"
             />
             <div class="p-6 bg-white">
-              <h2 class="text-2xl mb-2">{{ post.title }}</h2>
+              <h2 class="text-2xl font-title mb-2">{{ post.title }}</h2>
 
               <p class="text-base font-light">
                 {{ post.excerpt }}

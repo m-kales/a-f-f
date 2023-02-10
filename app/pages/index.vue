@@ -2,7 +2,7 @@
   <section class="home">
     <div class="mx-auto flex flex-wrap flex-col md:flex-row items-start">
       <div class="flex flex-col w-full xl:w-3/5 xl:pr-12 items-center justify-center relative">
-        <h1 class="text-6xl absolute text-white font-title">
+        <h1 class="text-4xl xl:text-6xl absolute text-white font-title">
           {{ welcomeHeadline }}
         </h1>
         <img :title="heroTitle" class="rounded shadow-xl" :src="heroImg" :alt="heroAlt" />
