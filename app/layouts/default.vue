@@ -1,12 +1,30 @@
 <template>
-  <main :class="[$route.name]" class="main px-4 md:px-0">
+  <main :class="[$route.name]" class="main px-4 md:px-0 font-sans">
     <div class="container mx-auto">
       <site-header />
       <nuxt class="nuxt" />
     </div>
 
-    <svg class="divider -mx-4 sm:mx-0" width="100%" viewBox="0 0 10 1">
-      <polygon stroke="none" stroke-width="0" fill="#0b3765" points="0,0.6 0,1 10,1 10,0" />
+    <svg class="divider" width="100%" viewBox="0 0 10 1">
+      <defs>
+        <linearGradient id="Gradient1">
+          <stop offset="0%" stop-color="#2184cd" />
+          <stop offset="33%" stop-color="#2184cd" />
+          <stop offset="33%" stop-color="white" />
+          <stop offset="66%" stop-color="white" />
+          <stop offset="66%" stop-color="red" />
+          <stop offset="100%" stop-color="red" />
+        </linearGradient>
+      </defs>
+
+      <polygon
+        class="polygon"
+        stroke="none"
+        fill="url(#Gradient1)"
+        stroke-width="0"
+        points="0,0.6
+        0,1 10,1 10,0"
+      />
     </svg>
 
     <site-footer />
@@ -30,7 +48,7 @@ export default class DefaultLayout extends Vue {}
 <style lang="scss">
 .divider {
   position: relative;
-  min-width: 100vw;
+  min-width: 100%;
   margin-top: auto;
 }
 

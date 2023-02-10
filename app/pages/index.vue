@@ -1,15 +1,17 @@
 <template>
   <section class="home">
-    <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col md:flex-row items-start">
-      <div class="flex flex-col w-full xl:w-2/5 pr-5">
-        <img
-          alt="Hero"
-          class="rounded shadow-xl"
-          src="~/static/images/uploads/antony-bec-nD9tEn63suc-unsplash_medium.jpg"
-        />
+    <div class="mx-auto flex flex-wrap flex-col md:flex-row items-start">
+      <div class="flex flex-col w-full xl:w-3/5 xl:pr-12 items-center justify-center relative">
+        <h1 class="text-4xl xl:text-6xl absolute text-white font-title">
+          {{ welcomeHeadline }}
+        </h1>
+        <img :title="heroTitle" class="rounded shadow-xl" :src="heroImg" :alt="heroAlt" />
       </div>
-      <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden">
-        <div v-html="$md.render(welcomeText)" class="home__welcome markdown" />
+      <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+        <div
+          v-html="$md.render(welcomeText + '\n\n --- \n\n' + welcomeTextFr)"
+          class="home__welcome markdown"
+        />
 
         <div class="mb-12 xl:mb-0">
           <h4 v-if="isSignedUp">Thank you - we'll be in touch shortly.</h4>
@@ -57,7 +59,17 @@ import settings from '@/content/settings/general.json';
 export default class Home extends Vue {
   [x: string]: any;
 
+  welcomeHeadline = settings.welcomeHeadline;
+
+  heroTitle = settings.heroTitle;
+
+  heroImg = settings.heroImg;
+
+  heroAlt = settings.heroAlt;
+
   welcomeText = settings.welcomeText;
+
+  welcomeTextFr = settings.welcomeTextFr;
 
   get posts(): Post[] {
     return this.$store.state.posts;
