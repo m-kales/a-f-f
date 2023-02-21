@@ -5,7 +5,14 @@
         <h1 class="text-4xl md:text-6xl absolute text-white font-title">
           {{ welcomeHeadline }}
         </h1>
-        <img :title="heroTitle" class="rounded shadow-xl" :src="heroImg" :alt="heroAlt" />
+        <img
+          :title="heroTitle"
+          width="740"
+          height="490"
+          class="rounded shadow-xl w-full"
+          :src="heroImg"
+          :alt="heroAlt"
+        />
       </div>
       <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
         <div
