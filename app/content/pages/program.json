@@ -8,8 +8,20 @@
       "file": "/images/uploads/af-forår-2023-v4.pdf"
     },
     {
+      "file": "/images/uploads/af-efterår-2022-v3.pdf",
+      "title": "Efterår 2022"
+    },
+    {
+      "file": "/images/uploads/af-forår-2022-v3.pdf",
+      "title": "Forår 2022"
+    },
+    {
       "file": "/images/uploads/af-efterår-2021-v3.pdf",
       "title": "Efterår 2021"
+    },
+    {
+      "file": "/images/uploads/af-forår-2021-v5.pdf",
+      "title": "Forår 2021"
     },
     {
       "file": "/images/uploads/af-efterår-2020-v5.pdf",
@@ -18,18 +30,6 @@
     {
       "file": "/images/uploads/af-efterår-2019-v4.pdf",
       "title": "Efterår 2019"
-    },
-    {
-      "file": "/images/uploads/af-forår-2022-v3.pdf",
-      "title": "Forår 2022"
-    },
-    {
-      "file": "/images/uploads/af-forår-2021-v5.pdf",
-      "title": "Forår 2021"
-    },
-    {
-      "file": "/images/uploads/af-efterår-2022-v3.pdf",
-      "title": "Efterår 2022"
     }
   ]
 }
