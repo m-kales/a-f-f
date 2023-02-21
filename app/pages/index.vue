@@ -2,7 +2,7 @@
   <section class="home">
     <div class="mx-auto flex flex-wrap flex-col md:flex-row items-start">
       <div class="flex flex-col w-full xl:w-3/5 xl:pr-12 items-center justify-center relative">
-        <h1 class="text-4xl xl:text-6xl absolute text-white font-title">
+        <h1 class="text-4xl md:text-6xl absolute text-white font-title">
           {{ welcomeHeadline }}
         </h1>
         <img :title="heroTitle" class="rounded shadow-xl" :src="heroImg" :alt="heroAlt" />
@@ -12,35 +12,6 @@
           v-html="$md.render(welcomeText + '\n\n --- \n\n' + welcomeTextFr)"
           class="home__welcome markdown"
         />
-
-        <!--         <div class="mb-12 xl:mb-0">
-          <h4 v-if="isSignedUp">Thank you - we'll be in touch shortly.</h4>
-
-          <form
-            v-else
-            @submit.prevent="handleSubmit"
-            name="signups"
-            netlify
-            class="flex items-center border-b border-b-2 border-blue-400 py-2"
-          >
-            <input
-              ref="emailInput"
-              v-model="form.email"
-              class="appearance-none mb-36 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-              type="text"
-              name="email"
-              placeholder="your@email.com"
-              aria-label="Email address"
-            />
-
-            <button
-              class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded"
-              type="submit"
-            >
-              Sign Up
-            </button>
-          </form>
-        </div> -->
       </div>
     </div>
   </section>
@@ -73,43 +44,6 @@ export default class Home extends Vue {
 
   get posts(): Post[] {
     return this.$store.state.posts;
-  }
-
-  isSignedUp = false;
-
-  form = {
-    email: '',
-  };
-
-  encode(data): string {
-    return Object.keys(data)
-      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&');
-  }
-
-  validEmail(email): boolean {
-    // eslint-disable-next-line
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  }
-
-  async handleSubmit(): Promise<void> {
-    if (!this.validEmail(this.form.email)) {
-      this.$refs.emailInput.focus();
-      return;
-    }
-
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'signups', ...this.form }),
-      });
-
-      this.isSignedUp = true;
-    } catch (error) {
-      console.error(error);
-    }
   }
 }
 </script>
