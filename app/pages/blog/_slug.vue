@@ -1,12 +1,15 @@
 <template>
   <article class="post" :class="post.slug">
     <div class="py-8 md:py-16 text-center mx-auto">
-      <h1 class="text-lg md:text-xl lg:text-4xl xl:text-6xl">
+      <h1 class="text-4xl xl:text-5xl font-title">
         {{ post.title }}
       </h1>
     </div>
 
-    <div v-html="$md.render(post.content)" class="post__content markdown pt-4 md:pt-6 md:pb-24" />
+    <div
+      v-html="$md.render(post.content)"
+      class="post__content markdown pt-4 md:pt-6 md:pb-24 w-11/12 md:w-5/6 xl:w-6/12 mx-auto"
+    />
   </article>
 </template>
 

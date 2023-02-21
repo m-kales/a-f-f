@@ -1,8 +1,8 @@
 <template>
-  <main :class="[$route.name]" class="main px-4 md:px-0 font-sans">
+  <main :class="[$route.name]" class="main font-sans">
     <div class="container mx-auto">
       <site-header />
-      <nuxt class="nuxt" />
+      <nuxt class="nuxt px-4" />
     </div>
 
     <svg class="divider" width="100%" viewBox="0 0 10 1">

@@ -1,6 +1,6 @@
 <template>
   <section class="page h-screen xl:w-1/2 mx-auto" :class="page.slug">
-    <h1 class="page__title font-title text-2xl lg:text-4xl xl:text-6xl text-center py-8 md:py-16">
+    <h1 class="page__title font-title text-4xl xl:text-5xl text-center py-8 md:py-16">
       {{ page.title }}
     </h1>
     <div

@@ -1,7 +1,7 @@
 <template>
   <section class="blog">
     <div class="py-8 md:py-16 text-center">
-      <h1 class="font-title text-2xl lg:text-4xl xl:text-6xl">Blog</h1>
+      <h1 class="font-title text-4xl xl:text-5xl">Blog</h1>
       <h2 class="text-base md:text-lg lg:text-xl xl:text-2xl">
         Læs om alliancens aktiviteter
       </h2>
