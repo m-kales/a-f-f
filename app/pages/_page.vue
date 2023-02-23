@@ -10,7 +10,7 @@
     <div v-if="page.pdf">
       <ul class="font-title text-2xl underline">
         <li v-for="(pdfFile, index) in page.pdf" :key="index">
-          <a :href="pdfFile.file">{{ pdfFile.title }}</a>
+          <a :href="pdfFile.file" target="_blank">{{ pdfFile.title }}</a>
         </li>
       </ul>
     </div>
