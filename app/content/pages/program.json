@@ -4,6 +4,10 @@
   "content": "Se alliancens programmer:",
   "pdf": [
     {
+      "file": "/images/uploads/af-efterår-2023-v4.pdf",
+      "title": "Efterår 2023"
+    },
+    {
       "title": "Forår 2023",
       "file": "/images/uploads/af-forår-2023-v4.pdf"
     },
@@ -38,10 +42,6 @@
     {
       "file": "/images/uploads/af-forår-2019-v5.pdf",
       "title": "Forår 2019"
-    },
-    {
-      "file": "/images/uploads/af-efterår-2023-v4.pdf",
-      "title": "Efterår 2023"
     }
   ]
 }
